@@ -1,0 +1,42 @@
+/* Product card container */
+.card {
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Image styling */
+.card img {
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Product title */
+.card-title {
+    margin-bottom: 6px;
+    font-size: 1.1rem;
+}
+
+/* Product description */
+.card-text {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+/* Price text */
+.card-text strong {
+    color: #222;
+}
+
+/* Button styling */
+button.btn {
+    padding: 4px 10px;
+    font-size: 0.85rem;
+}

@@ -1,0 +1,37 @@
+@using Week9.Models
+@inject NavigationManager Nav
+
+<!-- Reusable card to show product -->
+<div class="card mb-3" style="max-width: 520px;">
+    <div class="card-body">
+        <div class="d-flex gap-3">
+            <!-- Product image -->
+            <img src="@Item.Image" width="90" style="border-radius:8px;" />
+
+            <div style="flex:1;">
+                <h5 class="card-title">@Item.Name</h5>
+                <p class="card-text">@Item.Description</p>
+
+                <p class="card-text">
+                    <strong>Price:</strong> @Item.Price
+                </p>
+
+                <!-- Button to open details page -->
+                <button class="btn btn-sm btn-outline-primary" @onclick="GoToDetails">
+                    View Details
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    // Product sent from parent page
+    [Parameter] public Product Item { get; set; } = new();
+
+    // Navigate using route parameter (id)
+    private void GoToDetails()
+    {
+        Nav.NavigateTo($"/products/{Item.Id}");
+    }
+}
