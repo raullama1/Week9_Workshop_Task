@@ -1,0 +1,38 @@
+@page "/products"
+@using Week9.Data
+
+<h3>All Products</h3>
+
+<a class="btn btn-primary" href="/products/add">Add Product</a>
+
+@if (ProductStore.Products.Count == 0)
+{
+    <p>No products available.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Image</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        @foreach (var product in ProductStore.Products)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+                <td>
+                    <img src="@product.Image" width="60" />
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
