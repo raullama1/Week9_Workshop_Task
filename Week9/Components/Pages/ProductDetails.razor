@@ -1,0 +1,56 @@
+@using System.Linq
+@page "/products/{id:int}"
+@using Week9.Data
+@using Week9.Models
+@inject NavigationManager Nav
+
+<h3>Product Details</h3>
+
+@if (_product == null)
+{
+    <p class="text-danger">Product not found.</p>
+    <button class="btn btn-secondary" @onclick="GoBack">Back</button>
+}
+else
+{
+    <div class="details-card">
+        <img src="@_product.Image" class="details-img" />
+
+        <div class="details-info">
+            <h4>@_product.Name</h4>
+
+            <p class="details-price">
+                <strong>Price:</strong> @_product.Price
+            </p>
+
+            <p>
+                <strong>Description:</strong><br />
+                @_product.Description
+            </p>
+
+            <p>
+                <strong>Stock:</strong> @_product.Stock
+            </p>
+
+            <button class="btn btn-secondary" @onclick="GoBack">Back</button>
+        </div>
+    </div>
+}
+
+@code {
+    // Route parameter coming from URL
+    [Parameter] public int id { get; set; }
+
+    private Product? _product;
+
+    protected override void OnParametersSet()
+    {
+        // Using id
+        _product = ProductStore.Products.FirstOrDefault(p => p.Id == id);
+    }
+
+    private void GoBack()
+    {
+        Nav.NavigateTo("/products");
+    }
+}

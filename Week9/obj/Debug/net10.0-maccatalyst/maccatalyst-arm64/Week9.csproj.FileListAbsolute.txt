@@ -350,3 +350,4 @@
 /Users/tenta/Documents/Week9/Week9/obj/Debug/net10.0-maccatalyst/maccatalyst-arm64/ref/Week9.dll
 /Users/tenta/Documents/Week9/Week9/obj/Debug/net10.0-maccatalyst/maccatalyst-arm64/Week9.sourcelink.json
 /Users/tenta/Documents/Week9/Week9/obj/Debug/net10.0-maccatalyst/maccatalyst-arm64/scopedcss/Components/ProductCard.razor.rz.scp.css
+/Users/tenta/Documents/Week9/Week9/obj/Debug/net10.0-maccatalyst/maccatalyst-arm64/scopedcss/Components/Pages/ProductDetails.razor.rz.scp.css

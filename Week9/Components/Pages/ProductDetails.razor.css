@@ -1,0 +1,30 @@
+/*card styling section*/
+.details-card {
+    display: flex;
+    gap: 16px;
+    padding: 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background: #fff;
+    max-width: 750px;
+}
+
+/*image styling section*/
+.details-img {
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+/*heading 4 styling section*/
+.details-info h4 {
+    margin: 0 0 8px 0;
+}
+
+/*Price syling section*/
+.details-price {
+    margin: 0 0 10px 0;
+    font-size: 1.05rem;
+}
